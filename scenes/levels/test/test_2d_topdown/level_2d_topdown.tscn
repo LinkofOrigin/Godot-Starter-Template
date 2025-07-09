@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://i03itv6qfebj"]
+
+[ext_resource type="Script" uid="uid://b8ng75y37t2di" path="res://scenes/levels/test/test_2d_topdown/level_2d_topdown.gd" id="1_x80dw"]
+[ext_resource type="PackedScene" uid="uid://bif6ndqd33gkr" path="res://scenes/actors/player/player_2d_topdown/player_2d_topdown.tscn" id="2_jr5et"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_jr5et"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_6lmjq"]
+
+[node name="Level2dTopdown" type="Node"]
+script = ExtResource("1_x80dw")
+metadata/_custom_type_script = "uid://dv1w5sajc1p5r"
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Node2D"]
+position = Vector2(-136.875, -32.125)
+scale = Vector2(117.75, 98.25)
+mesh = SubResource("QuadMesh_jr5et")
+texture = SubResource("PlaceholderTexture2D_6lmjq")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="Node2D"]
+position = Vector2(151, 87)
+scale = Vector2(117.75, 98.25)
+mesh = SubResource("QuadMesh_jr5et")
+texture = SubResource("PlaceholderTexture2D_6lmjq")
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="Node2D"]
+position = Vector2(115, -109)
+scale = Vector2(117.75, 98.25)
+mesh = SubResource("QuadMesh_jr5et")
+texture = SubResource("PlaceholderTexture2D_6lmjq")
+
+[node name="Player2DTopdown" parent="Node2D" instance=ExtResource("2_jr5et")]

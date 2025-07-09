@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://bif6ndqd33gkr"]
+
+[ext_resource type="PackedScene" uid="uid://bvqconbcf2auv" path="res://scenes/components/controllers/movement/movement_2d_sidescroll/movement_2d_topdown.tscn" id="1_ucbkn"]
+[ext_resource type="Texture2D" uid="uid://bsj7ikglsmcv2" path="res://icon.svg" id="2_ucbkn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ub8sl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ucbkn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ucbkn"]
+size = Vector2(112, 109)
+
+[node name="Player2DTopdown" type="CharacterBody2D"]
+collision_mask = 3
+motion_mode = 1
+
+[node name="Movement2DTopdown" parent="." node_paths=PackedStringArray("target") instance=ExtResource("1_ucbkn")]
+target = NodePath("..")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_left = -1200
+limit_top = -1200
+limit_right = 1200
+limit_bottom = 1200
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ub8sl")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_ucbkn")

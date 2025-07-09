@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bntf5lq6gurud"]
+
+[ext_resource type="PackedScene" uid="uid://bhlj2ciym54jx" path="res://scenes/components/controllers/movement/movement_3d/movement_3d.tscn" id="1_qu2e3"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_x5h0v"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qu2e3"]
+
+[node name="Player3D" type="CharacterBody3D"]
+collision_mask = 3
+
+[node name="Movement3D" parent="." node_paths=PackedStringArray("target", "camera") instance=ExtResource("1_qu2e3")]
+target = NodePath("..")
+camera = NodePath("../Camera3D")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.572899, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_x5h0v")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_qu2e3")

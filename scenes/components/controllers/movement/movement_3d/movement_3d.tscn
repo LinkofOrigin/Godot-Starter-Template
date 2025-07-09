@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhlj2ciym54jx"]
+
+[ext_resource type="Script" uid="uid://bdn5tijysfyle" path="res://scenes/components/controllers/movement/movement_3d/movement_3d.gd" id="1_37n87"]
+
+[node name="Movement3D" type="Node"]
+script = ExtResource("1_37n87")
+lateral_acceleration = 60.0
+max_lateral_velocity = 8.0
+vertical_acceleration = 1.0
+max_vertical_velocity = 5.0

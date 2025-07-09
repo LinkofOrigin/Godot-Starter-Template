@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvqconbcf2auv"]
+
+[ext_resource type="Script" uid="uid://lw74y7qweg4g" path="res://scenes/components/controllers/movement/movement_2d_sidescroll/movement_2d_topdown.gd" id="1_a86fw"]
+
+[node name="Movement2DTopdown" type="Node"]
+script = ExtResource("1_a86fw")
+lateral_acceleration = 2500.0
+max_lateral_velocity = 500.0
+vertical_acceleration = 2500.0
+max_vertical_velocity = 500.0
