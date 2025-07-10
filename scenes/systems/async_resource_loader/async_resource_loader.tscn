@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5b2ya8djtm53"]
+
+[ext_resource type="Script" uid="uid://cyssoo5t2eua5" path="res://scenes/systems/async_resource_loader/async_resource_loader.gd" id="1_d0a2s"]
+
+[node name="AsyncResourceLoader" type="Node"]
+script = ExtResource("1_d0a2s")
