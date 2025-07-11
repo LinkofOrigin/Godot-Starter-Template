@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://co3jj2vhek3ww"]
 
 [ext_resource type="PackedScene" uid="uid://b0vitp44rloh7" path="res://scenes/components/controllers/movement/movement_2d_topdown/movement_2d_sidescroll.tscn" id="1_3sq17"]
-[ext_resource type="Texture2D" uid="uid://bsj7ikglsmcv2" path="res://icon.svg" id="2_3sq17"]
+[ext_resource type="Texture2D" uid="uid://bsj7ikglsmcv2" path="res://assets/icon.svg" id="2_3sq17"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jt212"]
 animations = [{
