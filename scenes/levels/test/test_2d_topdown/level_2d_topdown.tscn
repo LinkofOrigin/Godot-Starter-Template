@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://i03itv6qfebj"]
+[gd_scene load_steps=6 format=3 uid="uid://i03itv6qfebj"]
 
 [ext_resource type="Script" uid="uid://b8ng75y37t2di" path="res://scenes/levels/test/test_2d_topdown/level_2d_topdown.gd" id="1_x80dw"]
 [ext_resource type="PackedScene" uid="uid://bif6ndqd33gkr" path="res://scenes/actors/player/player_2d_topdown/player_2d_topdown.tscn" id="2_jr5et"]
+[ext_resource type="PackedScene" uid="uid://bcubtonhr8d33" path="res://scenes/menus/test/player_ui.tscn" id="3_6lmjq"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_jr5et"]
 
@@ -32,3 +33,5 @@ mesh = SubResource("QuadMesh_jr5et")
 texture = SubResource("PlaceholderTexture2D_6lmjq")
 
 [node name="Player2DTopdown" parent="Node2D" instance=ExtResource("2_jr5et")]
+
+[node name="PlayerUI" parent="." instance=ExtResource("3_6lmjq")]

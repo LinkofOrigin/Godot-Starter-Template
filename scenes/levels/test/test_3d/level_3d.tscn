@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://h65hmafug21x"]
+[gd_scene load_steps=9 format=3 uid="uid://h65hmafug21x"]
 
 [ext_resource type="Script" uid="uid://c1ygae5cp2bu8" path="res://scenes/levels/test/test_3d/level_3d.gd" id="1_bpcvs"]
 [ext_resource type="PackedScene" uid="uid://bntf5lq6gurud" path="res://scenes/actors/player/player_3d/player_3d.tscn" id="2_g00vt"]
+[ext_resource type="PackedScene" uid="uid://bcubtonhr8d33" path="res://scenes/menus/test/player_ui.tscn" id="3_vmuqf"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_g00vt"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -44,3 +45,5 @@ mesh = SubResource("BoxMesh_g00vt")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="WorldSpace/Floor"]
 transform = Transform3D(10.1876, 0, 0, 0, 0.166325, 0, 0, 0, 7.9579, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_dkr3c")
+
+[node name="CanvasLayer" parent="." instance=ExtResource("3_vmuqf")]

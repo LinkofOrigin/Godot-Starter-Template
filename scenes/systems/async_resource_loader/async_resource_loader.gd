@@ -7,26 +7,6 @@ signal failed_to_load_resource(path: StringName) ## Emitted when a requested res
 var _current_load_path: StringName
 
 
-func get_progress() -> float:
-	var progress_ratio := 0.0
-	if resource_is_valid(_current_load_path):
-		var progress := []
-		ResourceLoader.load_threaded_get_status(_current_load_path, progress)
-		progress_ratio = progress.pop_back()
-	return progress_ratio
-
-
-func get_status() -> ResourceLoader.ThreadLoadStatus:
-	var status := ResourceLoader.THREAD_LOAD_INVALID_RESOURCE
-	if resource_is_valid(_current_load_path):
-		status = ResourceLoader.load_threaded_get_status(_current_load_path)
-	return status
-
-
-func resource_is_valid(path: StringName) -> bool:
-	return ResourceLoader.exists(path)
-
-
 ## Attempt to load a resource file asynchronously.
 ## If it is loaded successfully, a signal will be emitted containing the resource.
 func load_scene(scene_path: StringName) -> void:
@@ -74,7 +54,27 @@ func get_resource() -> Resource:
 			resource = loaded_resource
 	
 	return resource
-	
+
+
+func get_progress() -> float:
+	var progress_ratio := 0.0
+	if resource_is_valid(_current_load_path):
+		var progress := []
+		ResourceLoader.load_threaded_get_status(_current_load_path, progress)
+		progress_ratio = progress.pop_back()
+	return progress_ratio
+
+
+func get_status() -> ResourceLoader.ThreadLoadStatus:
+	var status := ResourceLoader.THREAD_LOAD_INVALID_RESOURCE
+	if resource_is_valid(_current_load_path):
+		status = ResourceLoader.load_threaded_get_status(_current_load_path)
+	return status
+
+
+func resource_is_valid(path: StringName) -> bool:
+	return ResourceLoader.exists(path)
+
 
 func _retrieve_and_emit_loaded_resource() -> void:
 	var resource := get_resource()

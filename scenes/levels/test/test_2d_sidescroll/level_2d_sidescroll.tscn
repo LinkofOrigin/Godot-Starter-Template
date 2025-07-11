@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://dj7eeclqm8414"]
+[gd_scene load_steps=11 format=3 uid="uid://dj7eeclqm8414"]
 
 [ext_resource type="Script" uid="uid://78jx4b1o1hnr" path="res://scenes/levels/test/test_2d_sidescroll/level_2d_sidescroll.gd" id="1_f7cq1"]
 [ext_resource type="PackedScene" uid="uid://co3jj2vhek3ww" path="res://scenes/actors/player/player_2d_sidescroll/player_2d_sidescroll.tscn" id="2_7w1ud"]
+[ext_resource type="PackedScene" uid="uid://bcubtonhr8d33" path="res://scenes/menus/test/player_ui.tscn" id="3_onee0"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_onee0"]
 
@@ -67,3 +68,5 @@ texture = SubResource("CanvasTexture_na5et")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WorldSpace/RigidBox"]
 shape = SubResource("RectangleShape2D_onee0")
+
+[node name="PlayerUI" parent="." instance=ExtResource("3_onee0")]

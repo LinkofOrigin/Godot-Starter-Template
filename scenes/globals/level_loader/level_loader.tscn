@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://0cgatbyin487"]
+
+[ext_resource type="Script" uid="uid://b3q5nxge2650o" path="res://scenes/globals/level_loader/level_loader.gd" id="1_egtww"]
+[ext_resource type="Script" uid="uid://cyssoo5t2eua5" path="res://scenes/systems/async_resource_loader/async_resource_loader.gd" id="2_pwmqy"]
+[ext_resource type="PackedScene" uid="uid://c4586lap1ba5f" path="res://scenes/menus/loading_screen/loading_screen.tscn" id="3_pwmqy"]
+
+[node name="LevelLoader" type="Node"]
+script = ExtResource("1_egtww")
+
+[node name="AsyncResourceLoader" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_pwmqy")
+metadata/_custom_type_script = "uid://cyssoo5t2eua5"
+
+[node name="LoadingScreen" parent="." instance=ExtResource("3_pwmqy")]
+unique_name_in_owner = true

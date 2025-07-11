@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcubtonhr8d33"]
+
+[ext_resource type="Script" uid="uid://bgdfcw5b7w2hq" path="res://scenes/menus/test/player_ui.gd" id="1_d1611"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+layer = 3
+
+[node name="PlayerUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d1611")
+
+[node name="PrevScene" type="Button" parent="PlayerUI"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 25.0
+offset_top = 18.0
+offset_right = 150.0
+offset_bottom = 49.0
+text = "Previous Scene"
+
+[node name="NextScene" type="Button" parent="PlayerUI"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 1033.0
+offset_top = 17.0
+offset_right = 1128.0
+offset_bottom = 48.0
+text = "Next Scene"
